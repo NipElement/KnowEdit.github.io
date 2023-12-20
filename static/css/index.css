@@ -19,8 +19,8 @@ body {
 }
 
 .section {
-  padding-top: 1rem;
-  margin-bottom: 1rem; 
+  padding-top: 2rem;
+  margin-bottom: 2rem; 
 }
 
 .teaser .hero-body {
@@ -115,7 +115,6 @@ body {
 }
 
 .org-banner {
-  /* margin: 5px; */
   max-width: 100%;
   height: 6em;
   margin: 10px;
@@ -136,14 +135,12 @@ body {
   margin-top: 5px;
 }
 
-/* 媒体查询，只有当浏览器窗口宽度大于600px时才会应用 */
 @media (min-width: 600px) {
   .chart-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
-/* 当浏览器窗口宽度大于900px时 */
 @media (min-width: 900px) {
   .chart-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
