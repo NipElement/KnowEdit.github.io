@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EasyEdit</title>
+  <title>EditLLM</title>
     <style>
         .hidden {
             display: none;
@@ -28,9 +28,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="An Easy-to-use Knowledge Editing Framework for Large Language Models.">
-  <meta name="keywords" content="MMMU, LMM, LMM Evaluation, Vision Language Model">
+  <meta name="keywords" content="Model Editing">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models. </title>
+  <title> EditLLM: An Easy-to-use Knowledge Editing Framework for Large Language Models. </title>
 
   <link rel="icon" href="./static/images/logo.png">
 
@@ -44,8 +44,6 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/leaderboard.css">
 
-  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
   <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -76,13 +74,13 @@
       </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </nav>
@@ -95,7 +93,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
             <img src="static/images/logo.png" style="width:3em;vertical-align: middle" alt="Logo"/> 
-            <span class="easyedit" style="vertical-align: middle">EasyEdit</span>
+            <span class="easyedit" style="vertical-align: middle">EditLLM</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
             An Easy-to-use Knowledge Editing Framework  
@@ -256,14 +254,13 @@
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 mmmu">
+  <h1 class="title is-1 editing">
     <img src="static/images/logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
     <span class="easyedit" style="vertical-align: middle">Design and Implementation</span>
   </h1>
   </div>
 </section>
-
-            
+       
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -377,12 +374,17 @@
   </div>
 </section>
 
-<!-- Experiment SECTION -->
+<!-- Knowledge Editing SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <h1 class="title is-1 mmmu">Evaluation and Experiment</h1>
+  <h1 class="title is-1 editing">
+    <!-- <img src="static/images/logo.png" style="width:1em;vertical-align: middle" alt="Logo"/> -->
+    <span class="easyedit" style="vertical-align: middle">Knowledge Editing</span>
+  </h1>
   </div>
 </section>
+
+<section class="section">
   <div class="container">
     <!-- Evaluation. -->
     <div class="columns is-centered has-text-centered">
@@ -405,209 +407,100 @@
       </div>
     </div>
   </div>
+</section>
 
+<section>
   <div class="container">
+    <!-- Evaluation. -->
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 3rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <img src="static/images/results_knowledge.png" alt="error distribution" width="78%">
+            <p>Results of existing knowledge edit methods on the constructed benchmark. '-'' refers to the
+              results that the methods empirically fail to edit LLMs. For WikiBio and Convsent, we do not test
+              the portability as they are about specific topics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
-  <div class="columns is-centered m-6">
-    <div class="column is-three-quarters has-text-centered content">
-      <h2 class="title is-3" id="results">Experiment Results</h2>
-      <div class="content">
-        <table id="table1" class="js-sort-table">
-          <tr>
-              <td class="js-sort-number"><strong>Reset</strong></td>
-              <td class="js-sort-number"><strong>Reliability</strong></td>
-              <td class="js-sort-number"><strong>Generalization</strong></td>
-              <td class="js-sort-number"><strong>Locality</strong></td>
-              <td class="js-sort-number"><strong>Portability</strong></td>
-          </tr>
-          <tr>
-              <td style="text-align: left;"><b>FT-L</b></td>
-              <td>56.94</td>
-              <td>52.02</td>
-              <td>96.32</td>
-              <td>0.07</td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td style="text-align: left;"><b>SERAC</b></td>
-              <td>99.49</td>
-              <td>99.13</td>
-              <td><b>100.00</b></td>
-              <td>0.13</td>
-          </tr>
-          <tr>
-              <td style="text-align: left;"><b>IKE</b></td>
-              <td><b>100.00</b></td>
-              <td><b>99.98</b></td>
-              <td>69.19</td>
-              <td><b>67.56</b></td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td style="text-align: left;"><b>MEND</b></td>
-              <td>94.24</td>
-              <td>90.27</td>
-              <td>97.04</td>
-              <td>0.14</td>
-          </tr>
-          <tr>
-              <td style="text-align: left;"><b>KN</b></td>
-              <td>28.95</td>
-              <td>28.43</td>
-              <td>65.43</td>
-              <td>0.07</td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td style="text-align: left;"><b>ROME</b></td>
-              <td>92.45</td>
-              <td>87.04</td>
-              <td>99.63</td>
-              <td>10.46</td>
-          </tr>
-          <tr>
-              <td style="text-align: left;"><b>MEMIT</b></td>
-              <td>92.94</td>
-              <td>85.97</td>
-              <td>99.49</td>
-              <td>6.03</td>
-          </tr>
-        </table>
-        <p> Editing results of the four metrics on LlaMA-2 using EasyEdit. </p> 
+<!-- Editing Personality SECTION -->
+<section class="hero is-light is-small"> 
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 editing">
+      <span class="easyedit" style="vertical-align: middle">Editing Personality</span>
+    </h1>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <!-- Evaluation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <img src="static/images/results_personality.png" alt="error distribution" width="60%">
+            <p>The main result of the baselines on PersonalityEdit. The ↑ indicates the metric goes
+              higher if the editing method performs better, and ↓ indicates the lower the better. We do not report
+              the results of SERAC (The metrics based on generated text are set to '-') because it fails to generate
+              fluent text after editing personalities. We also do not report the MEND result of llama-2-13b-chat as
+              well as both the MEND and SERAC result of llama-2-70b-chat due to the failure implementation on
+              multi-gpu. Note that when training llama-2-7b-chat with MEND, the trained model cannot always
+              produce fluency text, so we filter out the incoherent case, and reported the generation result.
+              .</p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <div class="content has-text-justified">
-        <p>Table reveals <b>SERAC</b> and <b>IKE's</b> superior performance on the ZsRE datasets, exceeding 99% on several metrics. While ROME and MEMIT perform suboptimally in generalization, they exhibit relatively high performance in terms of reliability and locality.</p>
-        <p><b>IKE</b> exhibits the potential of gradient-free updates through in-context learning, leading to near-perfect scores in both reliability and generalization. However, it shows some deficiency in locality, as preceding prompts may influence out-of-scope inputs. <b>IKE</b> also presupposes that models have the capability for in-context learning, which could potentially limit its applicability to smaller models.</p>
-        <p><b>FT-L's</b> performance on ZsRE falls significantly short compared to ROME, even though both methods modify the same layer parameters. This suggests that under the norm constraint, fine-tuning is not an effective strategy for knowledge editing.</p>
-        <p><b>MEND</b> performs well overall, achieving over 90\% accuracy on multiple metrics and even surpassing ROME in terms of reliability and generalization.</p>
-        <p><b>KN</b> performs poorly, indicating that it may be better suited for editing tasks in smaller models or tasks involving knowledge attribution.</p>
+</section>
+
+<!-- Editing Personality SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 editing">
+    <!-- <img src="static/images/logo.png" style="width:1em;vertical-align: middle" alt="Logo"/> -->
+    <span class="easyedit" style="vertical-align: middle">Editing Security</span>
+  </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Evaluation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <img src="static/images/results_security.png" alt="error distribution" width="60%">
+            <p>xxx</p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="columns is-centered m-6">
-    <div class="column is-three-quarters has-text-centered content">
-      <h2 class="title is-3" id="Implementation">Current Implementation</h2>
-      <div class="content">
-        <table id="table2">
-          <tr>
-              <th>Method</th>
-              <th>T5</th>
-              <th>GPT-2</th>
-              <th>GPT-J</th>
-              <th>GPT-NEO</th>
-              <th>LlaMA</th>
-              <th>Baichuan</th>
-              <th>ChatGLM2</th>
-              <th>InternLM</th>
-              <th>Qwen</th>
-          </tr>
-          <tr>
-              <td><b>FT</b></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td><b>AdaLoRA</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>✅</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><b>SERAC</b></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td></td>
-              <td>✅</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td><b>IKE</b></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-          <tr>
-              <td><b>MEND</b></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td><b>KN</b></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-          <tr>
-              <td><b>ROME</b></td>
-              <td></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-          <tr style="background-color: #e8e8e8;">
-              <td><b>MEMIT</b></td>
-              <td></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
+</section>
+
 <!-- @PAN TODO: bibtex -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>
+    @article{wang2023easyedit,
+      title={EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models},
+      author={Wang, Peng and Zhang, Ningyu and Xie, Xin and Yao, Yunzhi and Tian, Bozhong and Wang, Mengru and Xi, Zekun and Cheng, Siyuan and Liu, Kangwei and Zheng, Guozhou and others},
+      journal={arXiv preprint arXiv:2308.07269},
+      year={2023}
+    }
     @article{wang2023easyedit,
       title={EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models},
       author={Wang, Peng and Zhang, Ningyu and Xie, Xin and Yao, Yunzhi and Tian, Bozhong and Wang, Mengru and Xi, Zekun and Cheng, Siyuan and Liu, Kangwei and Zheng, Guozhou and others},
@@ -689,121 +582,6 @@ function sortTable(table, column, type, asc) {
 
     rows.forEach(row => tbody.appendChild(row));
 }
-
-
-  document.getElementById('toggleButton').addEventListener('click', toggleTables);
-  const canvas = document.getElementById('difficulty_level_chart');
-  canvas.style.width = '500px';
-  canvas.style.height = '120px';
-  const ctx = document.getElementById('difficulty_level_chart').getContext('2d');
-  const difficulty_level_chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Easy', 'Medium', 'Hard', 'Overall'],
-      datasets: [{
-        label: 'Fuyu-8B',
-        data: [28.9, 27, 26.4, 27.4],
-        backgroundColor: 'rgba(196, 123, 160, 0.6)',
-        borderColor: 'rgba(196, 123, 160, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(196, 123, 160, 1)'
-      },
-      {
-        label: 'Qwen-VL-7B',
-        data: [39.4, 31.9, 27.6, 32.9],
-        backgroundColor: 'rgba(245, 123, 113, 0.6)',
-        borderColor: 'rgba(245, 123, 113, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(245, 123, 113, 1)'
-      },
-      {
-        label: 'LLaVA-1.5-13B',
-        data: [41.3, 32.7, 26.7, 33.6],
-        backgroundColor: 'rgba(255, 208, 80, 0.6)',
-        borderColor: 'rgba(255, 208, 80, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 208, 80, 1)'
-      },
-      {
-        label: 'InstructBLIP-T5-XXL',
-        data: [40.3, 32.3, 29.4, 33.8],
-        backgroundColor: 'rgba(110, 194, 134, 0.6)',
-        borderColor: 'rgba(110, 194, 134, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(110, 194, 134, 1)'
-      },
-      {
-        label: 'BLIP-2 FLAN-T5-XXL',
-        data: [41, 32.7, 28.5, 34],
-        backgroundColor: 'rgba(255, 153, 78, 0.6)',
-        borderColor: 'rgba(255, 153, 78, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 153, 78, 1)'
-      },
-      {
-        label: 'GPT-4V',
-        data: [76.1, 55.6, 31.2, 55.7],
-        backgroundColor: 'rgba(117, 209, 215, 0.6)',
-        borderColor: 'rgba(117, 209, 215, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(117, 209, 215, 1)'
-      }]
-    },
-    options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        min: 0,     
-        max: 100,
-        ticks: {
-          stepSize: 20,
-          font: {
-            size: 16
-          }
-        }
-      },
-      x: {
-        ticks: {
-          font: {
-            size: 16 // 设置X轴字体大小
-          }
-        }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 16 // 设置标签文字大小
-          }
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return context.dataset.label + ': ' + context.parsed.y;
-          }
-        }
-      }
-    },
-      onHover: (event, chartElement) => {
-        event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-      }
-    }
-  });
-  document.addEventListener('DOMContentLoaded', function() {
-    // Data for the "Diagrams" chart
-    const data_Diagrams = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [27.6, 30.1, 31.8, 30.0, 32.0, 46.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-});
-
 </script>
 
 

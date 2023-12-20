@@ -13,14 +13,18 @@ body {
     margin-bottom: 5px;
 }
 
-.mmmu {
+.editing {
   font-variant: small-caps;
   font-weight: bold;
 }
 
+.section {
+  padding-top: 1rem;
+  margin-bottom: 1rem; 
+}
 
 .teaser .hero-body {
-  padding-top: 0;
+  padding-top: 0rem;
   padding-bottom: 3rem;
 }
 
@@ -98,15 +102,6 @@ body {
   overflow: hidden;
 }
 
-/* .results-carousel .item {
-  margin: 20px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 0;
-} */
-
 .stats-image {
   max-height: 250px;
 }
@@ -182,7 +177,6 @@ body {
   margin: 5px; 
 }
 
-/* 自定义CSS */
 .custom-content-padding {
   padding-left: 4rem; 
   padding-right: 4rem; 
