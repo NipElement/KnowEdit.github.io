@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* 确保导航栏在页面的最上方 */
-  background-color: white; /* 根据你的需求设置背景色，防止内容透视 */
+  z-index: 1000;
+  background-color: white;
 }
 
 body {
